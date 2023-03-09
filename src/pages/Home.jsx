@@ -18,7 +18,7 @@ const Home = () => {
             <Card
               key={item.id}
               id={item.id}
-              src={item.src.original}
+              src={item.src.large}
               w={item.width}
               h={item.height}
             />

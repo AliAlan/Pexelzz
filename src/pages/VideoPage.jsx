@@ -17,7 +17,7 @@ const VideoPage = () => {
             <VideoCard
               key={item.id}
               id={item.id}
-              src={item?.video_files[0]?.link}
+              src={item?.video_files[1]?.link}
               // w={item.width}
               // h={item.height}
             />
