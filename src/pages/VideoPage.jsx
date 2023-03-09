@@ -9,7 +9,7 @@ const VideoPage = () => {
     ? useFetch(`videos/search?query=${searchVideo}?per_page=20`)
     : useFetch("videos/popular?per_page=20");
   return (
-    <div className="container mx-auto px-4">
+    <div className="page container mx-auto px-4">
       <Hero setSearchVideo={setSearchVideo} isVideo={true} />
       <div className="grid grid-cols-3 gap-6 items-start py-8">
         {response ? (

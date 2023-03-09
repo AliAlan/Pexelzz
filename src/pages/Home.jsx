@@ -10,7 +10,7 @@ const Home = () => {
     : useFetch("v1/curated?per_page=20");
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="page container mx-auto px-4">
       <Hero setSearchValue={setSearchValue} />
       <div className="grid grid-cols-3 gap-6 items-start py-8">
         {response ? (
