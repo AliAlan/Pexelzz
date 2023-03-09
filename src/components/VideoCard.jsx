@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Loading from "./Loading";
 
 const VideoCard = ({ id, src, w, h }) => {
   const [isHover, setIsHover] = useState(false);
@@ -9,16 +10,20 @@ const VideoCard = ({ id, src, w, h }) => {
   return (
     <Link to={`/videoDetail/${id}`}>
       <div>
-        <video
-          onMouseEnter={hoverHandler}
-          onMouseLeave={() =>
-            setIsHover((prevState) => (prevState = !prevState))
-          }
-          controls={isHover}
-          muted
-          loop
-          src={src}
-        ></video>
+        {src ? (
+          <video
+            onMouseEnter={hoverHandler}
+            onMouseLeave={() =>
+              setIsHover((prevState) => (prevState = !prevState))
+            }
+            controls={isHover}
+            muted
+            loop
+            src={src}
+          ></video>
+        ) : (
+          <Loading />
+        )}
       </div>
     </Link>
   );

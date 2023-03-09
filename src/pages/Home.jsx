@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Hero, Card } from "../components";
+import { Hero, Card, Loading } from "../components";
 import useFetch from "../hooks/useFetch";
 
 const Home = () => {
