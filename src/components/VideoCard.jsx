@@ -20,6 +20,7 @@ const VideoCard = ({ id, src, w, h }) => {
             muted
             loop
             src={src}
+            preload="meta-data"
           ></video>
         ) : (
           <Loading />

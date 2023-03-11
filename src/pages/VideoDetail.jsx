@@ -33,6 +33,7 @@ const VideoDetail = () => {
       </div>
       <div>
         <video
+          preload="meta-data"
           controls
           muted
           loop
