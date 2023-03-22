@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Loading from "./Loading";
 
-const VideoCard = ({ id, src, w, h }) => {
+const VideoCard = ({ id, src, w, h, img }) => {
   const [isHover, setIsHover] = useState(false);
   function hoverHandler() {
     setIsHover((prevState) => (prevState = !prevState));
@@ -16,6 +16,7 @@ const VideoCard = ({ id, src, w, h }) => {
             onMouseLeave={() =>
               setIsHover((prevState) => (prevState = !prevState))
             }
+            poster={img}
             controls={isHover}
             muted
             loop
