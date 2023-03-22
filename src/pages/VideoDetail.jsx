@@ -37,6 +37,7 @@ const VideoDetail = () => {
           controls
           muted
           loop
+          poster={response?.image}
           src={
             response?.video_files?.length > 1
               ? response?.video_files[0]?.link

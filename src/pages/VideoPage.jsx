@@ -18,6 +18,7 @@ const VideoPage = () => {
               key={item.id}
               id={item.id}
               src={item?.video_files[1]?.link}
+              img={item?.image}
               // w={item.width}
               // h={item.height}
             />
